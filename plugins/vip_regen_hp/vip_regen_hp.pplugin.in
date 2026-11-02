@@ -2,7 +2,7 @@
 	"$schema": "https://raw.githubusercontent.com/untrustedmodders/plugify/refs/heads/main/schemas/plugin.schema.json",
 	"version": "${VIP_REGEN_HP_VERSION}",
 	"name": "vip_regen_hp",
-	"description": "Health regeneration for VIPs: 'RegenHP' (HP per tick), 'DelayRegenHP' (seconds after taking damage before regeneration starts) and 'IntervalRegenHP' (seconds between ticks) come from groups.ini. A player_hurt hook starts the timer; every tick heals RegenHP until the pawn is at full health. A port of the Metamod:Source module 'VIP_RegenHP' of the Pisex cs2-vip plugin.",
+	"description": "Health regeneration for VIPs: 'RegenHP' (HP per tick), 'DelayRegenHP' (seconds after taking damage before regeneration starts) and 'IntervalRegenHP' (seconds between ticks) come from groups.ini. A player_hurt hook starts the countdown; every tick heals RegenHP until the pawn is at full health. A port of the Metamod:Source module 'VIP_RegenHP' of the Pisex cs2-vip plugin, on the pure s2sdk API.",
 	"author": "Pisex, ported to Plugify",
 	"website": "https://github.com/untrustedmodders/plugify",
 	"license": "GPL-3.0",
@@ -16,12 +16,7 @@
 		},
 		{
 			"name": "vip",
-			"constraints": ">=1.0.0"
-		},
-		{
-			"name": "hudmenu",
-			"constraints": ">=1.0.0",
-			"optional": true
+			"constraints": ">=1.2.7"
 		}
 	],
 	"methods": []
